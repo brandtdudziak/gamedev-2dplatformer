@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Vector2 input;
-
-    float speed = 5;
+    public float speed;
+    public float jump;
+    float moveVelocity;
     Rigidbody2D rb2d = null;
+    bool isGrounded = true;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +19,31 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector2 velocity = rb2d.velocity;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isGrounded)
+            {
+                rb2d.velocity = new Vector2(rb2d.velocity.x, jump);
+                isGrounded = false;
+            }
+        }
 
-        velocity.x = input.x * speed;
+        moveVelocity = 0;
 
-        rb2d.velocity = velocity;
+        if (Input.GetKey(KeyCode.A))
+        {
+            moveVelocity = -speed;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            moveVelocity = speed;
+        }
+
+        rb2d.velocity = new Vector2(moveVelocity, rb2d.velocity.y);
+    }
+
+    void OnCollisionEnter2D()
+    {
+        isGrounded = true;
     }
 }
