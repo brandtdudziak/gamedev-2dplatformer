@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 685500204}
   m_Layer: 0
   m_Name: Level
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -953,6 +953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913665253706046726, guid: 9615f59dc30dc5741ab13b9a1c8552b2,
+        type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9615f59dc30dc5741ab13b9a1c8552b2, type: 3}
