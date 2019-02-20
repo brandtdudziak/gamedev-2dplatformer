@@ -26,8 +26,12 @@ public class PlayerFreeze : MonoBehaviour
             if(distance >= spawnPointMinDistance)
             {
                 Instantiate(frozenPlayer, transform.position, transform.rotation);
+<<<<<<< HEAD
                 SpawnPoint sp = spawnPoint.GetComponent<SpawnPoint>();
                 sp.Respawn(gameObject);
+=======
+                transform.position = spawnPoint.transform.position;
+>>>>>>> parent of 1a6e8ad... Spawn Point
             }
         }
     }
