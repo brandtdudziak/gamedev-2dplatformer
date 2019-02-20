@@ -28,7 +28,6 @@ public class PlayerFreeze : MonoBehaviour
                 Instantiate(frozenPlayer, transform.position, transform.rotation);
                 SpawnPoint sp = spawnPoint.GetComponent<SpawnPoint>();
                 sp.Respawn(gameObject);
-                // test
             }
         }
     }
