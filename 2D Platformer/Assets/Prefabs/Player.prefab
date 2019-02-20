@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4399903382968482032}
   - component: {fileID: 2913665253706046726}
   - component: {fileID: 424206943982182051}
+  - component: {fileID: 3689789018413780110}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jump: 5
-  jumpPush: -20
+  jumpPush: 5
   wallJumpDelay: 0.1
   playerMask:
     serializedVersion: 2
@@ -170,6 +171,20 @@ MonoBehaviour:
   spawnPoint: {fileID: 6756459448860393838, guid: 7ee02e865a6d84876a434ac5908c1b45,
     type: 3}
   spawnPointMinDistance: 2
+--- !u!114 &3689789018413780110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2553421739191517858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce4df85b4a82b1c488a86be0231c2fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 6756459448860393838, guid: 7ee02e865a6d84876a434ac5908c1b45,
+    type: 3}
 --- !u!1 &2986889287631369337
 GameObject:
   m_ObjectHideFlags: 0
