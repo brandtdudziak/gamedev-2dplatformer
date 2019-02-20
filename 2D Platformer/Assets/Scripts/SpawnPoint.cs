@@ -18,8 +18,8 @@ public class SpawnPoint : MonoBehaviour
         
     }
 
-    public void Respawn()
+    public void Respawn(GameObject p)
     {
-        player.transform.position = transform.position;
+        p.transform.position = transform.position;
     }
 }
