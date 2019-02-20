@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4399903382968482032}
   - component: {fileID: 2913665253706046726}
   - component: {fileID: 424206943982182051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   jump: 5
   playerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 55
 --- !u!114 &424206943982182051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7499071710589359168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tag_ground
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
