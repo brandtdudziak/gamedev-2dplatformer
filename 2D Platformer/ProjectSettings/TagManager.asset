@@ -8,6 +8,7 @@ TagManager:
   - Bound
   - Fall
   - Goal
+  - Frozen
   layers:
   - Default
   - TransparentFX

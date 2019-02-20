@@ -23,4 +23,12 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(nextScene);
     }
+
+    public void RemoveFrozen()
+    {
+        foreach (GameObject frozen in GameObject.FindGameObjectsWithTag("Frozen"))
+        {
+            Destroy(frozen);
+        }
+    }
 }

@@ -5,12 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public GameObject spawnPoint;
-    private GameObject gameManager;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("Game Manager");
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -24,11 +24,11 @@ public class Player : MonoBehaviour
         {
             SpawnPoint sp = spawnPoint.GetComponent<SpawnPoint>();
             sp.Respawn(gameObject);
+            gameManager.RemoveFrozen();
         }
         if(collider.gameObject.CompareTag("Goal"))
         {
-            GameManager gm = gameManager.GetComponent<GameManager>();
-            gm.NextScene();
+            gameManager.NextScene();
         }
     }
 }
