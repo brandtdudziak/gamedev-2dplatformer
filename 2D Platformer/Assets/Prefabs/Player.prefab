@@ -161,4 +161,4 @@ MonoBehaviour:
     type: 3}
   spawnPoint: {fileID: 6756459448860393838, guid: 7ee02e865a6d84876a434ac5908c1b45,
     type: 3}
-  player: {fileID: 2553421739191517858}
+  spawnPointMinDistance: 2

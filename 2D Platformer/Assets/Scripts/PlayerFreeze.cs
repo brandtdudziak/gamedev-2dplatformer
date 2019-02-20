@@ -8,6 +8,7 @@ public class PlayerFreeze : MonoBehaviour
     public KeyCode freezeControl;
     public GameObject frozenPlayer;
     public GameObject spawnPoint;
+    public float spawnPointMinDistance;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,13 @@ public class PlayerFreeze : MonoBehaviour
     {
         if(Input.GetKeyDown(freezeControl))
         {
-            Instantiate(frozenPlayer, transform.position, transform.rotation);
-            transform.position = spawnPoint.transform.position;
+            Vector2 direction = spawnPoint.transform.position - transform.position;
+            float distance = direction.magnitude;
+            if(distance >= spawnPointMinDistance)
+            {
+                Instantiate(frozenPlayer, transform.position, transform.rotation);
+                transform.position = spawnPoint.transform.position;
+            }
         }
     }
 }
