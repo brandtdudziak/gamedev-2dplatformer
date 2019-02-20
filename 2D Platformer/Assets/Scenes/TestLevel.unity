@@ -959,6 +959,16 @@ PrefabInstance:
       propertyPath: playerMask.m_Bits
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 2913665253706046726, guid: 9615f59dc30dc5741ab13b9a1c8552b2,
+        type: 3}
+      propertyPath: jumpPush
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913665253706046726, guid: 9615f59dc30dc5741ab13b9a1c8552b2,
+        type: 3}
+      propertyPath: wallJumpDelay
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4427120222864024237, guid: 9615f59dc30dc5741ab13b9a1c8552b2,
         type: 3}
       propertyPath: m_Icon
