@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     bool isOnWallLeft = false;
     bool isOnWallRight = false;
     bool wallJump = false;
+    bool hasWallJumpedL = false;
+    bool hasWallJumpedR = false;
 
     Transform tagGround;
     Transform tagWallRight;
@@ -52,7 +54,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        
+        if(isGrounded)
+        {
+            hasWallJumpedL = false;
+            hasWallJumpedR = false;
+        }
     }
 
     public void Move()
@@ -84,16 +90,20 @@ public class PlayerController : MonoBehaviour
                 rb2d.velocity = new Vector2(rb2d.velocity.x, jump);
             }
 
-            if (isOnWallLeft && !isGrounded)
+            if (isOnWallLeft && !isGrounded && !hasWallJumpedL)
             {
                 rb2d.velocity = new Vector2(jumpPush, jump);
                 wallJump = true;
+                hasWallJumpedR = false;
+                hasWallJumpedL = true;
             }
 
-            if (isOnWallRight && !isGrounded)
+            if (isOnWallRight && !isGrounded && !hasWallJumpedR)
             {
                 rb2d.velocity = new Vector2(-jumpPush, jump);
                 wallJump = true;
+                hasWallJumpedL = false;
+                hasWallJumpedR = true;
             }
         }
     }
