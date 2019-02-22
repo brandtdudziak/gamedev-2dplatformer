@@ -13,12 +13,6 @@ public class Player : MonoBehaviour
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D collider) {
         if(collider.gameObject.CompareTag("Fall"))
         {

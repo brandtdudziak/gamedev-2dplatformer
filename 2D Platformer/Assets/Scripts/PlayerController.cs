@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     bool wallJump = false;
     bool hasWallJumpedL = false;
     bool hasWallJumpedR = false;
+    bool canControl = true;
 
     Transform tagGround;
     Transform tagWallRight;
@@ -36,6 +37,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(!canControl)
+        {
+            return;
+        }
+
         Jump();
         if (!wallJump)
         {
@@ -106,5 +112,18 @@ public class PlayerController : MonoBehaviour
                 hasWallJumpedR = true;
             }
         }
+    }
+
+    public void DelayMovement()
+    {
+        rb2d.velocity = new Vector2(0, rb2d.velocity.y);
+        StartCoroutine(DelayMovementRoutine());
+    }
+
+    public IEnumerator DelayMovementRoutine()
+    {
+        canControl = false;
+        yield return new WaitForSeconds(0.5f);
+        canControl = true;
     }
 }

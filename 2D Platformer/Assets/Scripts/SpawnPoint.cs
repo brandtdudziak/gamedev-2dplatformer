@@ -12,14 +12,10 @@ public class SpawnPoint : MonoBehaviour
         Instantiate(player, transform.position, transform.rotation);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Respawn(GameObject p)
     {
+        PlayerController pc = p.GetComponent<PlayerController>();
+        pc.DelayMovement();
         p.transform.position = transform.position;
     }
 }
