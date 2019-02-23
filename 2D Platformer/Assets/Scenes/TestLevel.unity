@@ -358,7 +358,7 @@ PrefabInstance:
     - target: {fileID: 2913665253706046726, guid: 9615f59dc30dc5741ab13b9a1c8552b2,
         type: 3}
       propertyPath: jumpPush
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2913665253706046726, guid: 9615f59dc30dc5741ab13b9a1c8552b2,
         type: 3}

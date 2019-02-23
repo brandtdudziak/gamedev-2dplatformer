@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jump: 5
-  jumpPush: 5
+  jump: 6
+  jumpPush: 6
   wallJumpDelay: 0.1
   playerMask:
     serializedVersion: 2
@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freezeControl: 101
+  resetKey: 114
   frozenPlayer: {fileID: 267914604573079740, guid: 68fabbbe480eb40178e1f254104d5af0,
     type: 3}
   spawnPoint: {fileID: 6756459448860393838, guid: 7ee02e865a6d84876a434ac5908c1b45,
