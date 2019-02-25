@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
     {
         numOfFreezes -= amountDecreased;
     }
+    public void resetFreezes(float freezes)
+    {
+        numOfFreezes = freezes;
+    }
 
     public void RemoveFrozen()
     {
