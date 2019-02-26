@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public GameObject spawnPoint;
     private GameManager gameManager;
-    private float freezes;
+    private int freezes;
 
     // Start is called before the first frame update
     void Start()

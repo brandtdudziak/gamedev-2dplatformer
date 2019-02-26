@@ -11,7 +11,8 @@ public class PlayerFreeze : MonoBehaviour
     public GameObject spawnPoint;
     public float spawnPointMinDistance;
     private GameManager gameManager;
-    private float freezes;
+    private int freezes;
+
 
     // Start is called before the first frame update
     void Start()

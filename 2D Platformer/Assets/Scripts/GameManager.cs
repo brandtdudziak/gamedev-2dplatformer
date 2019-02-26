@@ -6,23 +6,24 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public string nextScene;
-    public float numOfFreezes;
+    public int numOfFreezes;
 
     public void NextScene()
     {
         SceneManager.LoadScene(nextScene);
     }
 
-    public float getFreezesLeft()
+    public int getFreezesLeft()
     {
         return numOfFreezes;
     }
 
-    public void alterFreezesLeft(float amountDecreased)
+    public void alterFreezesLeft(int amountDecreased)
     {
         numOfFreezes -= amountDecreased;
     }
-    public void resetFreezes(float freezes)
+
+    public void resetFreezes(int freezes)
     {
         numOfFreezes = freezes;
     }

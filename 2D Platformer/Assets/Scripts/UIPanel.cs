@@ -7,5 +7,10 @@ public class UIPanel : MonoBehaviour
 {
     public Text healthText;
 
-
+    public void UpdateLives(float lives)
+    {
+        if(healthText == null)
+            return;
+        healthText.text = lives.ToString();
+    }
 }
