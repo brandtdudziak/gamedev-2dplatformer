@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameObject spawnPoint;
+    private SpawnPoint spawnPoint;
     private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        spawnPoint = GameObject.Find("Spawn Point").GetComponent<SpawnPoint>();
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {

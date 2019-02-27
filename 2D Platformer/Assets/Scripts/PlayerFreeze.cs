@@ -8,7 +8,7 @@ public class PlayerFreeze : MonoBehaviour
     public KeyCode freezeControl;
     public KeyCode resetKey;
     public GameObject frozenPlayer;
-    public GameObject spawnPoint;
+    private SpawnPoint spawnPoint;
     public float spawnPointMinDistance;
     private GameManager gameManager;
 
@@ -17,6 +17,7 @@ public class PlayerFreeze : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        spawnPoint = GameObject.Find("Spawn Point").GetComponent<SpawnPoint>();
     }
 
     // Update is called once per frame
