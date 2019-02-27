@@ -9,6 +9,7 @@ public class SpawnPoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(transform.position);
         Instantiate(player, transform.position, transform.rotation);
     }
 
@@ -16,6 +17,7 @@ public class SpawnPoint : MonoBehaviour
     {
         PlayerController pc = p.GetComponent<PlayerController>();
         pc.DelayMovement();
+        Debug.Log(transform.position);
         p.transform.position = transform.position;
     }
 }
