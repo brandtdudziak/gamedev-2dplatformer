@@ -6,7 +6,15 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public string nextScene;
-    public int numOfFreezes;
+    public int maxFreezes;
+    private int usedFreezes;
+    private UIPanel ui;
+
+    private void Start() {
+        usedFreezes = 0;
+        ui = GameObject.Find("UI").GetComponent<UIPanel>();
+        ui.UpdateLives(getFreezesLeft());
+    }
 
     public void NextScene()
     {
@@ -15,17 +23,19 @@ public class GameManager : MonoBehaviour
 
     public int getFreezesLeft()
     {
-        return numOfFreezes;
+        return maxFreezes - usedFreezes;
     }
 
-    public void alterFreezesLeft(int amountDecreased)
+    public void alterFreezesLeft(int amountIncreased)
     {
-        numOfFreezes -= amountDecreased;
+        usedFreezes += amountIncreased;
+        ui.UpdateLives(getFreezesLeft());
     }
 
-    public void resetFreezes(int freezes)
+    public void resetFreezes()
     {
-        numOfFreezes = freezes;
+        usedFreezes = 0;
+        ui.UpdateLives(getFreezesLeft());
     }
 
     public void RemoveFrozen()
