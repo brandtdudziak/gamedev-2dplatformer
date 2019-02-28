@@ -143,8 +143,6 @@ MonoBehaviour:
   resetKey: 114
   frozenPlayer: {fileID: 267914604573079740, guid: 68fabbbe480eb40178e1f254104d5af0,
     type: 3}
-  spawnPoint: {fileID: 6756459448860393838, guid: 7ee02e865a6d84876a434ac5908c1b45,
-    type: 3}
   spawnPointMinDistance: 2
 --- !u!114 &3689789018413780110
 MonoBehaviour:
@@ -158,8 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4df85b4a82b1c488a86be0231c2fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 6756459448860393838, guid: 7ee02e865a6d84876a434ac5908c1b45,
-    type: 3}
 --- !u!60 &5393004219284951631
 PolygonCollider2D:
   m_ObjectHideFlags: 0
